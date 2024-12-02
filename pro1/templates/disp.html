@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+{% load static %}
+{% block title %}
+{{ category.category }}
+{% endblock title %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/card.css' %}">
+{% endblock head %}
+
+{% block content %}
+<style>
+    .back{
+        text-decoration: none;
+        color: black;
+    }
+    .back:hover{
+        color:rgb(44, 125, 255);
+    }
+</style>
+<div class="navi">
+    <span><a class="back" href="{% url 'index' %}">Home</a></span>
+    <span><a class="back" href="{% url 'Read' category.id %}">\ {{ category.category }}</a></span>
+</div>
+<h1>{{ category.category }}</h1>
+<div class="container">
+    {% for card in cards %}  
+    <div class="card">
+        <img src="{{ card.image }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ card.title }}</h5>
+            <p class="card-text">{{ card.des }}</p>
+            <a href="{% url 'Read' card.id %}" class="btn btn-primary" style="background-color: #122620; border:None;">Read</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

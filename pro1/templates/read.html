@@ -1,0 +1,28 @@
+{% extends 'layouts/main.html' %}
+{% load static %}
+{% block title %}
+    Read
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/read.css' %}" />
+{% endblock head %}
+{% block content %}
+<div class="container">
+    <div class="navi">
+        <span><a class="back" href="{% url 'index' %}">Home</a></span>
+        <span><a class="back" href="{% url 'Read' read.id %}">\ Read</a></span>
+    </div>
+    <div class="inner">
+        <h1 class="title">{{ read.name.title }}</h1>
+        <p class="para">{{ read.para1 }}</p>
+        <img class="image" src="{{ read.img1 }}" alt="img1">
+        <p class="para">{{ read.para2 }}</p>
+        <img class="image" src="{{ read.img2 }}" alt="img2">
+        <p class="para">{{ read.para3 }}</p>
+        <img class="image" src="{{ read.img3 }}" alt="img3">
+        <p class="para">{{ read.para4 }}</p>
+    </div>
+</div>
+    
+{% endblock content %}

@@ -1,0 +1,21 @@
+.card {
+    width: 400px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: space-between; /* Push the button to the bottom */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+.card-img-top {
+    height: 30vh;
+}
+.container {
+    display: flex;
+    flex-direction: row; /* Arrange cards in a row */
+    gap: 15px; /* Add space between cards */
+    overflow-x: auto; /* Add horizontal scrolling if content overflows */
+    padding: 15px;
+}
+.card:hover {
+    transform: scale(1.05);
+}

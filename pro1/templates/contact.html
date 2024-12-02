@@ -1,0 +1,15 @@
+{% extends 'layouts/main.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Contact Us - Thoutify{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Contact Us</h1>
+    <p>If you have any questions, suggestions, or just want to say hello, feel free to drop us a message using the form below. We'd love to hear from you!</p>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/card.css' %}">
+<div class="container">
+    {% for card in cards %}
+    <div class="card">
+        <img src="{{card.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{card.title}}</h5>
+            <p class="card-text">{{card.des}}</p>
+            <a href="{% url 'Read' card.id %}" class="btn btn-primary" style="background-color: #122620; border:None;">Read</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

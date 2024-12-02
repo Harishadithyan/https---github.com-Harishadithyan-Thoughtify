@@ -1,0 +1,24 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.container{
+    margin-top: 20px;
+    width:100%;
+    height:100%;
+    justify-content: center;
+}
+.image{
+    width:400px;
+    height:40vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.back{
+    text-decoration: none;
+    color: black;
+}
+.back:hover{
+    color:rgb(44, 125, 255);
+}
